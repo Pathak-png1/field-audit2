@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Buttons</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>ATM Visit Report</h1>
+    
+    <!-- Buttons for selecting the form type -->
+    <div class="buttons">
+      <button class="btn" onclick="changeForm('ra-visit')">RA Visit</button>
+      <button class="btn" onclick="changeForm('deep-cleaning')">Deep Cleaning</button>
+      <button class="btn" onclick="changeForm('night-visit')">Night Visit</button>
+    </div>
+
+    <!-- Form -->
+    <form id="form" onsubmit="handleSubmit(event)">
+      <label for="atm-id">ATM ID:</label>
+      <input type="text" id="atm-id" name="atm-id" required>
+
+      <label for="bank">Bank:</label>
+      <input type="text" id="bank" name="bank" required>
+
+      <label for="audit-date">Audit Date:</label>
+      <input type="date" id="audit-date" name="audit-date" required>
+
+      <label for="ra-name">RA Name:</label>
+      <input type="text" id="ra-name" name="ra-name" required>
+
+      <label for="atm-working">ATM Working:</label>
+      <input type="checkbox" id="atm-working" name="atm-working">
+
+      <label for="cleaning-done">Cleaning Done:</label>
+      <input type="checkbox" id="cleaning-done" name="cleaning-done">
+
+      <label for="lobby-light-working">Lobby Light Working:</label>
+      <input type="checkbox" id="lobby-light-working" name="lobby-light-working">
+
+      <!-- Add all other form fields here -->
+      <label for="remarks">Remarks:</label>
+      <textarea id="remarks" name="remarks"></textarea>
+
+      <!-- File inputs for photos -->
+      <label for="photos">Upload Photos:</label>
+      <input type="file" id="photos1" name="photos" multiple>
+
+      <!-- Submit & Reset buttons -->
+      <div class="buttons">
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
